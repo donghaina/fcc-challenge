@@ -1,0 +1,173 @@
+ssh-keygen -t rsa -f ~/.ssh/id_rsa_2 -C "transgenderchina@163.com"
+
+ssh -T git@transgenderchina.github.com
+ssh-add ~/.ssh/id_rsa_2
+
+git config user.name "taosang1992"
+git config user.email "taosang1992@gmail.com"
+
+git config user.email “transgenderchina@163.com”
+git config user.name “transgenderchina”
+
+git remote add origin git@transgenderchina.github.com:Article
+
+donghn@DONGHN-PC MINGW64 /e/transchina
+$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_2 -C "transgenderchina@163.com"
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase):
+
+
+donghn@DONGHN-PC MINGW64 /e/transchina
+$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_2 -C "transgenderchina@163.com"
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Passphrases do not match.  Try again.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/donghn/.ssh/id_rsa_2.
+Your public key has been saved in /c/Users/donghn/.ssh/id_rsa_2.pub.
+The key fingerprint is:
+SHA256:W4yVYAid64CnmK5k4c7P7FRjxOBqFU4NojRLRew9tGk transgenderchina@163.com
+The key's randomart image is:
++---[RSA 2048]----+
+| =+B+o oo        |
+|+ B.+o+. . .     |
+|...=ooo.  o      |
+|  +.+E.  +       |
+| * o.*. S o      |
+|= o o o  o       |
+|.+ .    .        |
+|=.+              |
+|ooo=             |
++----[SHA256]-----+
+
+donghn@DONGHN-PC MINGW64 /e/transchina
+$ ssh -T git@transchina.github.com
+ssh: connect to host transchina.github.com port 22: Connection timed out
+
+donghn@DONGHN-PC MINGW64 /e/transchina
+$ ssh -T git@ieit.github.com
+ssh: connect to host ieit.github.com port 22: Connection timed out
+
+donghn@DONGHN-PC MINGW64 /e/transchina
+$ ssh -T git@github.com
+Hi taosang1992! You've successfully authenticated, but GitHub does not provide shell access.
+
+donghn@DONGHN-PC MINGW64 /e/transchina
+$ ssh -T git@transchina.github.com
+ssh: connect to host transchina.github.com port 22: Connection timed out
+
+donghn@DONGHN-PC MINGW64 /e/transchina
+$ ssh-add ~/.ssh/id_rsa_2
+Could not open a connection to your authentication agent.
+
+donghn@DONGHN-PC MINGW64 /e/transchina
+$ ssh -T git@github.com
+Hi taosang1992! You've successfully authenticated, but GitHub does not provide shell access.
+
+donghn@DONGHN-PC MINGW64 /e/transchina
+$ ssh -T git@transgenderchina.github.com
+Hi transgenderchina! You've successfully authenticated, but GitHub does not provide shell access.
+
+donghn@DONGHN-PC MINGW64 /e/transchina
+$ git clone https://github.com/transgenderchina/Article.git
+Cloning into 'Article'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+donghn@DONGHN-PC MINGW64 /e/transchina
+$ git config –global –unset user.name
+fatal: not in a git directory
+
+donghn@DONGHN-PC MINGW64 /e/transchina
+$ cd Article
+bash: gicd: command not found
+
+donghn@DONGHN-PC MINGW64 /e/transchina
+$ cd Article
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ git config –global –unset user.name
+error: key does not contain a section: –global
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ git config user.email “transgenderchina@163.com”
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ git config user.name “transgenderchina”
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ git remote rm origin
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ git remote add origin git@transgenderchina.github.com
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ git push origin master
+fatal: 'git@transgenderchina.github.com' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ git remote add origin git@transgenderchina.github.com:Article
+fatal: remote origin already exists.
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ ^C
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ git remote rm origin
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ git remote add origin git@transgenderchina.github.com:Article
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$  git push origin master
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ ^C
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ git push origin master
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ git add .
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ git cmt -m "some file"
+[master 881b8f3] some file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1.txt
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ git push -u origin master
+Connection reset by 192.30.253.112 port 22
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+donghn@DONGHN-PC MINGW64 /e/transchina/Article (master)
+$ git push origin master
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+git remote add FCC git@github.com:taosang1992/FCC-Project.git
+
