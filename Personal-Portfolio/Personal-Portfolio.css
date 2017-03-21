@@ -1,0 +1,26 @@
+body{
+	font-size: 20px;
+}
+#about{
+	background-color: #0080FF;
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+.img-div img{
+	width: 250px;
+	height: 250px;
+	margin: auto;
+}
+#portfolio{
+	background-color: #00994C;
+	padding: 50px;
+}
+#contact{
+	background-color: #A0A0A0;
+	padding: 50px;
+}
+footer{
+	color: #FFFFFF;
+	background-color: #202020;
+	line-height: 70px;
+}
