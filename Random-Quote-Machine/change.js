@@ -61,6 +61,5 @@ function newQuote(){
 	quote.style.color = color[colorindex];
 	wrap.style.backgroundColor = color[colorindex];
 	button.style.backgroundColor = color[colorindex];
-	title.style.color = color[colorindex];
-	author.style.color = color[colorindex];
+	title.style.color = "#987";
 }
