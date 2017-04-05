@@ -5,12 +5,12 @@
 	<title>Your Location App</title>
 </head>
 <body>
-	
-  <h4>You are here:</h4> 
-  <div id = "data">
+
+<div id = "data">
+  <h4>You are here:</h4>
 </div>
 <script>
-  if (navigator.geolocation) {
+if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
     $("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
   });

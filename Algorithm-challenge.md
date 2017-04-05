@@ -44,3 +44,35 @@ No repeats please Incomplete
 Make a Person Incomplete
 Map the Debris Incomplete
 Pairwise Incomplete
+
+```
+function diffArray(arr1, arr2) {
+  var newArr = arr1.concat(arr2);
+  // Same, same; but different.
+  newArr.sort();
+  for (var i = 0; i < newArr.length; i++) {
+    if (newArr[i]===newArr[i+1]) {
+        delete newArr[i];
+        delete newArr[i+1];
+    }
+  }
+  return newArr.filter(Boolean);
+}
+```
+```
+function sumAll(arr) {
+  var min,max; 
+  if (arr[0]>arr[1]) {
+    max = arr[0];
+    min = arr[1];
+  }else{
+    max = arr[1];
+    min = arr[0];
+  }
+  var sum = 0;
+  for (var i = min; i <= max ; i++) {
+    sum+=i;    
+}
+    return sum;
+}
+```
