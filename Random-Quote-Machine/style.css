@@ -1,43 +1,63 @@
 *{
 	margin: 0;
 	padding: 0;
+	font-family: Verdana,'华文细黑','微软雅黑';
+}
+body{
+	width: 100vw;
+	height: 100vh;
 }
 #quoteWrapper{
 	width: 100vw;
 	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #00944c;
+	background-color: #1E90FF;
 }
+#quoteWrapper h1{
+	border: 10px solid hsla(0,0%,100%,.5);
+	position: relative;
+	top: 50px;
+	width: 500px;
+	margin:0 auto;
+	text-align: center;
+	color: #fff;
+	padding: 10px;
+}	
+
 #quote-box{
-	width: 450px;
-	padding: 40px;
+	position: relative;
+	top: 50px;
+	width: 600px;
+	padding: 20px;
 	background-color: #fff;
 	border-radius: 5px;
 	font-size: 1.5rem;
 	text-align: center;
+	margin:100px auto 10px;
 }
 
-button{
-	border: none;
+#quote-box #btn{
+	display: inline-block;
+	width: 110px;
+	height: 30px;
 	border-radius: 5px;
-	width: 100px;
-	height: 2rem;
+	position: relative;
+	bottom: -5px;
+	right: -250px;
+	line-height: 30px;
 	font-size:1rem;
 	color: #fff;
-	background-color:#00944c;
+	background-color:#1E90FF;
 	letter-spacing: 1px;
-	position: relative;
-	right: -180px;
-	bottom: -20px;
+	cursor: pointer;
 }
 
 .byAuthor{
 	color: #fff;
 	text-align: center;
+	position: relative;
+	top: 50px;
 } 
 
 #author,#title,#quote{
-	color: #00944c;
+	color: #1E90FF;
 }
