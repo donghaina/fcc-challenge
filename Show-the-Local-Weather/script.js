@@ -1,5 +1,5 @@
 $(document).ready(function() {
-        $.getJSON('http://ipinfo.io', function(location) {
+        $.getJSON('//ipinfo.io', function(location) {
         var locArr = location.loc.split(',');
         // console.log(locArr);
         var lat = locArr[0];
