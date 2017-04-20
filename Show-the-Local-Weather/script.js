@@ -5,7 +5,7 @@ $(document).ready(function() {
         var lat = locArr[0];
         var lon = locArr[1];
         // console.log(lat+","+lon);
-        var api = 'http://api.openweathermap.org/data/2.5/weather?' + "lat=" + lat + "&lon=" + lon + "&units=metric&appid=86e8744e87c5dc3b51370144a2d7df8b";
+        var api = '//api.openweathermap.org/data/2.5/weather?' + "lat=" + lat + "&lon=" + lon + "&units=metric&appid=86e8744e87c5dc3b51370144a2d7df8b";
         console.log(api);
         $.getJSON(api, function(data) {
             // document.write("城市: " + location.city + "<br>" + "温度：" + data.main.temp);
