@@ -1,17 +1,36 @@
 $(document).ready(function() {
-        $.getJSON('http://ipinfo.io', function(location) {
+/*        $.getJSON('http://api.openweathermap.org/data/2.5/weather?id=2172797&appid=86e8744e87c5dc3b51370144a2d7df8b', function(data) {
+    console.log(data.wind.deg);
+});*/
+
+/*var lat, lon;
+var arr = [];
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+        lat = Math.round(position.coords.latitude);
+        lon = Math.round(position.coords.longitude);
+        var api = 'http://api.openweathermap.org/data/2.5/weather?' + "lat=" + lat + "&lon=" + lon + "&units=metric&appid=86e8744e87c5dc3b51370144a2d7df8b";
+        console.log(api);
+        $.getJSON(api, function(data) {
+               console.log(data.name);
+            });
+        });
+}*/
+
+    $.getJSON('http://ipinfo.io', function(location) {
         var locArr = location.loc.split(',');
         // console.log(locArr);
         var lat = locArr[0];
         var lon = locArr[1];
-        // console.log(lat+","+lon);
         var api = 'http://api.openweathermap.org/data/2.5/weather?' + "lat=" + lat + "&lon=" + lon + "&units=metric&appid=86e8744e87c5dc3b51370144a2d7df8b";
-        console.log(api);
+        // console.log(api);
         $.getJSON(api, function(data) {
-            // document.write("城市: " + location.city + "<br>" + "温度：" + data.main.temp);
             $('#loc').text(location.city);
             $('#temp').text(data.main.temp);
             $('#wind').text(data.wind.speed);
+            $('#windDir').text(getWindDir(data.wind.deg));
+            // console.log(data.wind.deg);
+            // console.log(getWindDir(data.wind.deg));
             $('#desc').text(data.weather[0].description);
             $('#humidity').text(data.main.humidity);
             $weather = data.weather[0].main;
@@ -79,5 +98,12 @@ $(document).ready(function() {
             $body.css('background-repeat', 'no-repeat');
             $body.css('background-size', '100% 100%');
         });
+
+        function getWindDir(dir) {
+            var windDir = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+            var windIndex = Math.floor(dir / 45);
+            return windDir[windIndex];
+        }
     });
+
 });

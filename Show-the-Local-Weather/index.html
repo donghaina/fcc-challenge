@@ -11,17 +11,20 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="title-box">
-            <h1><i class="fa fa-free-code-camp" aria-hidden="true"></i>&nbsp;Local Weather App</h1>
-        </div>
-        <div class="info-box">
-            <h1><i  id="icon" class="wi"></i>&nbsp;<span id="temp"></span> &#176;C</h1>
-            <p><i class="fa fa-map-marker"></i>&nbsp;<span id="loc"></span>&nbsp;|&nbsp;<span id="desc"></span></p>
-            <p>Wind:&nbsp;<span id="wind"></span></p>
-            <p>Humidity:&nbsp;<span id="humidity"></span></p>
-        </div>
-    </div>
+	<div class="wrapper">
+	    <div class="title-box">
+	        <h1><i class="fa fa-free-code-camp" aria-hidden="true"></i>&nbsp;Local Weather App</h1>
+	    </div>
+	    <div class="info-box">
+	        <i id="icon" class="wi"></i>
+	        <div class="temp-loc">
+	            <h1>&nbsp;<span id="temp"></span> &#176;C</h1>
+	            <p><i class="fa fa-map-marker"></i>&nbsp;<span id="loc"></span>&nbsp;|&nbsp;<span id="desc"></span></p>
+	            <p>Wind:&nbsp;<span id="windDir"></span>&nbsp;<span id="wind"></span>&nbsp;m/s</p>
+	            <p>Humidity:&nbsp;<span id="humidity"></span>%</p>
+	        </div>
+	    </div>
+	</div>
     <script src="jquery-3.2.0.min.js"></script>
     <script src="script.js"></script>
 </body>

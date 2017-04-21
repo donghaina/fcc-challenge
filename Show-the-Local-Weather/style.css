@@ -37,3 +37,12 @@ body{
 #icon{
     font-size: 100px;
 }
+
+#icon,div.temp-loc{
+    display: inline-block;
+}
+
+#icon{
+    vertical-align: top;
+    width: 140px;
+}
