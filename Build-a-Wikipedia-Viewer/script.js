@@ -9,6 +9,7 @@ $(document).ready(function() {
             $.getJSON(api, function(data) {
                 // console.log(data[1].length);
                 var len = data[1].length;
+                $("#output").empty();
                 for (var i = 0; i < len; i++) {
                     var $list = $("<div></div>"); //创建放搜索条目的盒子
                     var $list_title = "<h2><a href=\"" + data[3][i] + "\">" + data[1][i] + "</a></h2>"; //创建放文章title的H1元素
@@ -30,6 +31,7 @@ $(document).ready(function() {
                 console.log(api);
                 $.getJSON(api, function(data) {
                     var len = data[1].length;
+                    $("#output").empty();
                     for (var i = 0; i < len; i++) {
                         var $list = $("<div></div>"); //创建放搜索条目的盒子
                         var $list_title = "<h2><a href=\"" + data[3][i] + "\">" + data[1][i] + "</a></h2>"; //创建放文章title的H1元素

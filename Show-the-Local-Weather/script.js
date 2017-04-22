@@ -26,7 +26,23 @@ if (navigator.geolocation) {
         // console.log(api);
         $.getJSON(api, function(data) {
             $('#loc').text(location.city);
-            $('#temp').text(data.main.temp);
+            var tempValue = $('#temp');
+            tempValue.text(data.main.temp);
+            var tempUnit = $('#tempUnit');
+            tempUnit.bind('click',function(){
+                if(tempUnit.text()==='C'){
+                    tempUnit.text('F');
+                    var ctemp = tempValue.text();
+                    var ftemp = (parseInt(ctemp)*9/5+32).toFixed(2);
+                    tempValue.text(ftemp);
+                    
+                }else{
+                    tempUnit.text('C');
+                    var ftemp = tempValue.text();
+                    var ctemp = ((parseInt(ftemp)-32)*5/9).toFixed(2);
+                    tempValue.text(ctemp);
+                }
+            })
             $('#wind').text(data.wind.speed);
             $('#windDir').text(getWindDir(data.wind.deg));
             // console.log(data.wind.deg);
