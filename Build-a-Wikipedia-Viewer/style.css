@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+    line-height: 1.5em;
+}
+
+body {
+    max-width: 100vw;
+    /*min-height: 100vh;*/
+    background: #eee;
+    background-image: url(http://www.dailycold.tw/wp-content/uploads/2016/04/2000px-Wikipedia-logo-v2-en.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100px auto;
+    background-attachment: fixed;
+}
+
+body>h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+#search {
+    min-width: 500px;
+    height: 2rem;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+#btn {
+    display: inline-block;
+    width: 70px;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: #369;
+    vertical-align: middle;
+    color: #fff;
+    text-align: center;
+    line-height: 2rem;
+    cursor: pointer;
+    padding: 2px;
+    margin-right: 10px;
+}
+
+.random {
+    display: inline-block;
+    width: 70px;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: #369;
+    vertical-align: middle;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2rem;
+    padding: 2px;
+}
+
+.list {
+    max-width: 960px;
+    border-radius: 10px;
+    margin: 10px auto;
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+.list a {
+    text-decoration: none;
+    color: #4285f4;
+}
+
+.list a:hover {
+    color: #f19f0f;
+}
