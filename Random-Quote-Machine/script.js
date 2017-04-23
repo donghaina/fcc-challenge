@@ -207,8 +207,10 @@ var title = document.getElementById('title');
 var quote = document.getElementById('quote');
 var author = document.getElementById('author');
 var wrap = document.getElementById('quoteWrapper');
-var btn = document.getElementById('btn');
-btn.addEventListener('click',function(){
+var share = document.getElementById('share');
+var getQuote = document.getElementById('getQuote');
+var shareLink = document.querySelector('#share a'); 
+getQuote.addEventListener('click',function(){
 	var index = Math.floor(Math.random()*40);
 	var colorindex=Math.floor(Math.random()*18);
 	quote.innerHTML = quotes[index].quote.replace(/[\u3002]/g,'。<br>');
@@ -218,5 +220,9 @@ btn.addEventListener('click',function(){
 	author.style.color = color[colorindex];
 	quote.style.color = color[colorindex];
 	wrap.style.backgroundColor = color[colorindex];
-	btn.style.backgroundColor = color[colorindex];
+	share.style.backgroundColor = color[colorindex];
+	shareLink.setAttribute('href','https://twitter.com/intent/tweet?text='+quote.textContent+'——'+author.textContent+'《'+title.textContent+'》');
+	console.log(shareLink.getAttribute('href'));
+	getQuote.style.backgroundColor = color[colorindex];
+
 });

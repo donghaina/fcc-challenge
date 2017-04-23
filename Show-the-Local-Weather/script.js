@@ -17,7 +17,7 @@ if (navigator.geolocation) {
         });
 }*/
 
-    $.getJSON('http://ipinfo.io', function(location) {
+    $.getJSON('https://ipinfo.io', function(location) {
         var locArr = location.loc.split(',');
         // console.log(locArr);
         var lat = locArr[0];
